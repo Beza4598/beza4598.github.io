@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beza Amsalu</title>
+<meta name="description" content="Beza Amsalu, a Software Engineer in New York.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: #fff;
+    color: #000;
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  main {
+    max-width: 672px;
+    margin: 0 auto;
+    padding: 12px 16px 48px;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  p { margin: 0 0 16px; }
+  a {
+    color: #000;
+    text-decoration: none;
+    background: #ebebeb;
+  }
+  a:hover { background: #d6e4ff; }
+
+  /* full-width bar, like "→ Here's a copy of my resume" */
+  a.bar {
+    display: flex;
+    background: #dddddd;
+    margin: 0 0 16px;
+  }
+  a.bar + a.bar { margin-top: -8px; }
+  a.bar .arrow {
+    display: block;
+    width: 29px;
+    height: 20px;
+    background: #bababa;
+    flex: none;
+  }
+  a.bar .label { padding-left: 1ch; }
+  a.bar:hover { background: #d6e4ff; }
+  a.bar:hover .arrow { background: #a9c4f2; }
+
+  /* two "pages": About (default) and Interests */
+  #interests { display: none; }
+  #interests:target { display: block; }
+  body:has(#interests:target) #about { display: none; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <a href="#top" id="top">bezaamsalu</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="mailto:bezaaa5@gmail.com">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+  <p>My name is Beza Amsalu, and I'm a Software Engineer.<br>
+  I'm currently working at <a href="https://www.bloomberg.com/company/" target="_blank" rel="noopener">Bloomberg</a> in New York, building data infrastructure for Bloomberg's Data License product.</p>
+
+  <p>Before that, I studied Computer Science at <a href="https://www.columbia.edu/" target="_blank" rel="noopener">Columbia</a> and graduated in 2024.</p>
+
+  <a class="bar" href="beza-amsalu-resume.pdf" target="_blank" rel="noopener">
+    <svg class="arrow" width="29" height="20" viewBox="0 0 29 20" aria-hidden="true"><path d="M7 8.75H18" stroke="#000" stroke-width="1.1"/><path d="M17.5 6.6L22 8.75L17.5 10.9Z" fill="#000"/></svg><span class="label">Here's a copy of my resume</span>
+  </a>
+
+  <p id="projects">Some of my projects:</p>
+
+  <a class="bar" href="https://thememen.com" target="_blank" rel="noopener">
+    <svg class="arrow" width="29" height="20" viewBox="0 0 29 20" aria-hidden="true"><path d="M7 8.75H18" stroke="#000" stroke-width="1.1"/><path d="M17.5 6.6L22 8.75L17.5 10.9Z" fill="#000"/></svg><span class="label">thememen.com</span>
+  </a>
+  </section>
+
+  <section id="interests">
+    <p>I'm interested in political economy: how markets, the state and capital shape who gets to build. Some favorite readings:</p>
+
+    <a class="bar" href="https://www.goodreads.com/search?q=The+Road+to+Freedom+Stiglitz" target="_blank" rel="noopener">
+      <svg class="arrow" width="29" height="20" viewBox="0 0 29 20" aria-hidden="true"><path d="M7 8.75H18" stroke="#000" stroke-width="1.1"/><path d="M17.5 6.6L22 8.75L17.5 10.9Z" fill="#000"/></svg><span class="label">The Road to Freedom, Joseph Stiglitz</span>
+    </a>
+    <a class="bar" href="https://en.wikipedia.org/wiki/The_Shock_Doctrine" target="_blank" rel="noopener">
+      <svg class="arrow" width="29" height="20" viewBox="0 0 29 20" aria-hidden="true"><path d="M7 8.75H18" stroke="#000" stroke-width="1.1"/><path d="M17.5 6.6L22 8.75L17.5 10.9Z" fill="#000"/></svg><span class="label">The Shock Doctrine, Naomi Klein</span>
+    </a>
+
+    <p>I'm also a big Manchester United fan.</p>
+
+    <a class="bar" href="https://open.spotify.com/user/m60f49aoren2idkrugdzsxu4o" target="_blank" rel="noopener">
+      <svg class="arrow" width="29" height="20" viewBox="0 0 29 20" aria-hidden="true"><path d="M7 8.75H18" stroke="#000" stroke-width="1.1"/><path d="M17.5 6.6L22 8.75L17.5 10.9Z" fill="#000"/></svg><span class="label">What I'm listening to right now</span>
+    </a>
+  </section>
+
+  <p id="contact">Find me on <a href="https://x.com/bezaamsaluu" target="_blank" rel="noopener">Twitter</a>, <a href="https://github.com/Beza4598" target="_blank" rel="noopener">GitHub</a> and <a href="https://www.linkedin.com/in/bezaamsalu" target="_blank" rel="noopener">LinkedIn</a>, or email me at bezaaa5 at gmail dot com.</p>
+</main>
+<script>
+  // keep the header in view when switching between About and Interests
+  window.addEventListener('hashchange', function () { window.scrollTo(0, 0); });
+</script>
+</body>
+</html>
